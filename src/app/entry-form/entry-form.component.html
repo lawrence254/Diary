@@ -1,0 +1,28 @@
+<div class="container-flex">
+  <div class="row">
+    <form class="" (ngSubmit)='submitEntry()' #diaryForm='ngForm'>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text"  class="form-control" id="title" [(ngModel)]="newEntry.title" name="title" #title="ngModel" required>
+        <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+          <p> A title is required for the entry</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="details">Details</label>
+        <textarea required class="form-control" id="title" [(ngModel)]="newEntry.details" #details="ngModel" rows="4" name="details"></textarea>
+        <div [hidden]="details.valid || details.pristine" class="alert alert-danger">
+          <p> Please enter details for your entry</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="date">Day</label>
+        <input type="date" id="createDate" required [(ngModel)]="newEntry.createDate" #createDate="ngModel" name="createDate" class="form-control">
+        <div [hidden]="createDate.valid || createDate.pristine" class="alert alert-danger">
+          <p> Please enter a valid date</p>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" name="button">Create New Entry</button>
+    </form>
+  </div>
+</div>
