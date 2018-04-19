@@ -9,7 +9,7 @@
       </div>
       <ol>
       <div class="col-md-6" *ngFor='let entry of entries;let i = index'>
-        <div class="titleHold"><li>{{entry.title}} created {{entry.createDate|date|uppercase}}</li></div>
+        <div class="titleHold">{{entry.title}} created {{entry.createDate|date|uppercase}}</div>
           <button class="btn btn-success" (click)='toggleDetails(i)'>Show Entry Details</button>
           <app-diary-details *ngIf="entry.showDetails" [entry] = 'entry' (isComplete)='deleteEntry($event,i)'></app-diary-details>
         </div>
