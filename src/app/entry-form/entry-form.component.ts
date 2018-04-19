@@ -14,7 +14,6 @@ export class EntryFormComponent implements OnInit {
   submitEntry() {
     this.addEntry.emit(this.newEntry);
   }
-
   constructor() { }
 
   ngOnInit() {

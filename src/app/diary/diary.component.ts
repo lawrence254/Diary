@@ -21,13 +21,14 @@ export class DiaryComponent implements OnInit {
       }
     }
   }
+
   addNewEntry(entry){
       let entryLength = this.entries.length;
       entry.id=entryLength+1;
       entry.createDate = new Date(entry.createDate)
       this.entries.push(entry)
-
   }
+
   constructor() { }
 
   ngOnInit() {
