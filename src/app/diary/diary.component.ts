@@ -15,7 +15,10 @@ export class DiaryComponent implements OnInit {
     new Diary(5, 'Solve math homework', 'Sample Description 5', new Date(2000, 5, 2)),
     new Diary(6, 'Plot my world domination plan', 'Sample Description 6', new Date(2000, 5, 2)),
   ]
-  console.log(this.entries);
+
+  toggleDetails(index){
+    this.entries[index].showDetails = !this.entries[index].showDetails;
+  }
 
 
   constructor() { }
