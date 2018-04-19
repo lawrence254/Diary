@@ -10,7 +10,7 @@ export class DiaryDetailsComponent implements OnInit {
   @Input() entry:Diary;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  entryComplete(complete:boolean){
+  deleteEntry(complete:boolean){
     this.isComplete.emit(complete);
   }
   constructor() { }

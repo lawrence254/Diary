@@ -2,10 +2,10 @@
 <hr>
 <ul>
 <div *ngFor='let entry of entries;let i = index'>
-    <li>{{entry.title}}</li>
+    <li>{{entry.title}} created on {{entry.createDate|date|uppercase}}</li>
     <button (click)='toggleDetails(i)'>Show Entry Details</button>
 
-    <app-diary-details *ngIf="entry.showDetails" [entry] = 'entry' (isComplete)='completeEntry($event,i)'></app-diary-details>
+    <app-diary-details *ngIf="entry.showDetails" [entry] = 'entry' (isComplete)='deleteEntry($event,i)'></app-diary-details>
   </div>
 
 </ul>

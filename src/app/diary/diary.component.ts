@@ -19,9 +19,12 @@ export class DiaryComponent implements OnInit {
   toggleDetails(index){
     this.entries[index].showDetails = !this.entries[index].showDetails;
   }
-  completeEntry(isComplete,index){
+  deleteEntry(isComplete,index){
     if(isComplete){
-      this.entries.splice(index,1);
+      let toDelete = confirm(`Are you sure you want to delete: ${this.entries[index].title}`)
+      if (toDelete){
+        this.entries.splice(index,1)
+      }
     }
   }
 
