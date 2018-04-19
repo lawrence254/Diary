@@ -3,5 +3,7 @@
 .titleHold{
   background: #051937;
   width:300px;
-
+  margin:1%;
+  padding: 2%;
+  text-align: center;
 }
