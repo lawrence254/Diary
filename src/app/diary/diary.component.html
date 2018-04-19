@@ -5,7 +5,7 @@
     <li>{{entry.title}}</li>
     <button (click)='toggleDetails(i)'>Show Entry Details</button>
 
-    <app-diary-details *ngIf="entry.showDetails" [entry] = 'entry'></app-diary-details>
+    <app-diary-details *ngIf="entry.showDetails" [entry] = 'entry' (isComplete)='completeEntry($event,i)'></app-diary-details>
   </div>
 
 </ul>

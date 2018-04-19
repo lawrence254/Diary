@@ -19,7 +19,11 @@ export class DiaryComponent implements OnInit {
   toggleDetails(index){
     this.entries[index].showDetails = !this.entries[index].showDetails;
   }
-
+  completeEntry(isComplete,index){
+    if(isComplete){
+      this.entries.splice(index,1);
+    }
+  }
 
   constructor() { }
 

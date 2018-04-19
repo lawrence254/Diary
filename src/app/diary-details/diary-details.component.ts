@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import {Diary} from '../diary'
 @Component({
   selector: 'app-diary-details',
@@ -8,6 +8,11 @@ import {Diary} from '../diary'
 export class DiaryDetailsComponent implements OnInit {
 
   @Input() entry:Diary;
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  entryComplete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
   constructor() { }
 
   ngOnInit() {
