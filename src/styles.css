@@ -2,5 +2,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 .titleHold{
   background: #051937;
+  width:300px;
 
 }
